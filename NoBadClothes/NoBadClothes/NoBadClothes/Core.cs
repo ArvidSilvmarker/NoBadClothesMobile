@@ -11,7 +11,7 @@ namespace NoBadClothes
         public static async Task<Weather> GetWeather(string city)
         {
             //Todo: lägg till kod för att söka på andra städer än Göteborg.
-            string url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/11.585100/lat/57.401800/data.json";
+            string url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/11.968802/lat/57.706775/data.json";
             dynamic result = await DataService.getForecast(url).ConfigureAwait(false);
             Forecast forecast = (Forecast) result;
             return MapWeather(forecast, city);
